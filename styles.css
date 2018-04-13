@@ -1,0 +1,215 @@
+/* CSS Variables */ 
+:root {
+    --primary: #ddd;
+    --dark: #333; 
+    --light: #fff; 
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+html {
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif;  
+    color: var(--dark);
+}
+
+body {
+    background: #333; 
+    margin: 30px 50px; 
+    line-height: 1.4; 
+}
+
+.btn {
+    background: var(--dark); 
+    color: var(--light);
+    padding: 0.6rem 1.3rem; 
+    text-decoration: none; 
+    border: 0; 
+}
+
+img { 
+    max-width: 100%; 
+}
+
+.wrapper { 
+    display: grid;
+    grid-gap: 20px; 
+
+}
+
+/* Navigation */
+.main-nav ul {
+    display: grid; 
+    grid-gap: 10px; 
+    padding: 0; 
+    list-style: none; 
+    grid-template-columns: repeat(7, 1fr); 
+}
+
+.main-nav a {
+    background: var(--primary); 
+    display: block;
+    text-decoration: none; 
+    padding: 0.8rem; 
+    text-align: center; 
+    color: var(--dark); 
+    text-transform: uppercase;  
+    font-size: 1.0rem; 
+    box-shadow: var(--shadow); 
+}
+
+.main-nav a:hover { 
+    background: var(--dark); 
+    color: var(--light); 
+}
+
+.main-nav placeholder {
+    display: grid;    
+}
+
+
+
+
+
+/* Top photo container */ 
+.top-container { 
+    display: grid; 
+    Grid-gap: 20px; 
+    grid-template-areas: 
+    'showcase';  
+
+}
+
+/* Showcase */ 
+.showcase { 
+    grid-area: showcase; 
+    min-height: 400px; 
+    background: url(images/drone1.jpg);
+    background-size: cover; 
+    background-position: center; 
+    padding: 3rem;  
+    display: flex; 
+    flex-direction: column;
+    align-items: start; 
+    justify-items: center; 
+    box-shadow: var(--shadow); 
+}
+
+.showcase h1 {
+    font-size: 4rem; 
+    margin-bottom: 0;
+    color: var(--primary); 
+}
+
+.showcase p {
+    font-size: 1.3rem; 
+    margin-top: 0; 
+    color: var(--dark); 
+}
+
+/* Boxes */ 
+.boxes {
+    display: grid; 
+    grid-gap: 20px; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+}
+
+.box {
+    background: var(--primary); 
+    text-align: center; 
+    padding: 1.5rem 2rem; 
+    box-shadow: var(--primary);
+
+}
+
+/* Videos */ 
+.videos {
+    display: grid; 
+    grid-gap: 20px; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+}
+
+.video { 
+    background: var(--light); 
+    text-align: center; 
+    padding: 1.5rem 2rem; 
+    box-shadow: var(--primary);    
+}
+
+/* picture gallery */ 
+.pictures {  
+    display: grid; 
+    grid-gap: 20px; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+}
+
+.pictures img {
+    width: 300px; 
+    height: 200px; 
+    box-shadow: var(--shadow); 
+}
+
+/* Footer */
+footer { 
+    margin-top: 1rem; 
+    background: var(--primary); 
+    color: var(--light);
+    text-align: center; 
+    padding: 1rem; 
+}
+
+/* About Page */
+.about-boxes {
+    display: grid; 
+    grid-gap: 20px; 
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-box {
+    background: var(--primary);
+    text-align: center; 
+    padding: 1.5rem 2rem; 
+    
+    box-shadow: var(--primary);
+}
+
+/* Contact Page */
+
+.contact-form {
+    background: var(--primary);
+    text-align: center; 
+    color: var(--light); 
+}
+
+/* Media Queries home */
+@media (max-width: 700px) {
+    .top-container {
+        grid-template-areas:
+        'showcase'
+    }
+
+    .showcase h1 {
+        font-size: 2.5rem; 
+    }
+
+    .main-nav ul { 
+        grid-template-columns: 1fr; 
+    }
+
+    .boxes { 
+        grid-template-columns: 1fr; 
+    }
+
+    .videos {
+        grid-template-columns: 1fr; 
+    }
+
+    .showcase .btn {
+        display: block; 
+        text-align: center; 
+        margin: auto; 
+    }
+
+    .about-boxes {
+        grid-template-columns: 1fr; 
+    }
+}
